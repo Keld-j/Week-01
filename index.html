@@ -4,11 +4,18 @@
     <script src="https://unpkg.com/@tensorflow/tfjs"></script>
     <!-- Load the latest version of mobilenet. TensorFlow.js is required to use MobileNet. -->
     <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <!-- Load the K-nearest-neighbour Classifier for use with webcam detection -->
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <div id="console"></div>
-    <!-- Here we add a .jpg picture of a dog - just to see that everything works  -->
-    <img id="img" crossOrigin src="https://i.imgur.com/JlUvsxa.jpg" width=227 height=227/>
+    <!-- Load the webcam. The actual code for this is in the index.js file  -->
+       <video autoplay playsinline muted id="webcam" width="400" height="400"></video><br>
+    <!-- We want to be able to tell our model, that what is on the webcam is one of the 3 different classes, so we need some buttons  -->
+    <button class="button button1" id="class-a">Class A</button>
+    <button class="button button2" id="class-b">Class B</button>
+    <button class="button button3" id="class-c">Class C</button>
     <!-- Load index.js after the content of the page -->
     <script src="index.js"></script>
   </body>
