@@ -41,8 +41,8 @@ async function app() {
 
         const classes = ['Class A', 'Class B', 'Class C'];
         document.getElementById('console').innerText = `
-          prediction: ${classes[result.classIndex]}\n
-          probability: ${result.confidences[result.classIndex]}
+          prediction: ${classes[parseInt(result.label)]}\n
+          probability: ${result.confidences[parseInt(result.label)]}
         `;
       }
       await tf.nextFrame();
